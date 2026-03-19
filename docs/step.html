@@ -325,8 +325,8 @@
 
             const codeBlocks = container.querySelectorAll('pre');
             codeBlocks.forEach((block) => {
-                const code = block.querySelector('code');
-                if (!code || block.querySelector('.code-copy-btn')) return;
+                const codeElement = block.querySelector('code');
+                if (!codeElement || block.querySelector('.code-copy-btn')) return;
 
                 const button = document.createElement('button');
                 button.type = 'button';
@@ -337,7 +337,7 @@
                 let resetTimeoutId = null;
                 button.addEventListener('click', async () => {
                     try {
-                        await copyTextToClipboard(code.textContent ?? '');
+                        await copyTextToClipboard(codeElement.textContent ?? '');
                         button.textContent = 'Copied!';
                         button.classList.add('copied');
                     } catch {
