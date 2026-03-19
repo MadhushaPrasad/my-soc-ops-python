@@ -221,6 +221,7 @@
             ? '../workshop/'
             : 'https://raw.githubusercontent.com/copilot-dev-days/agent-lab-python/main/workshop/';
         const CHECKBOX_STORAGE_KEY = 'agent-lab-checkboxes-v1';
+        const COPY_FEEDBACK_DURATION_MS = 1600;
         let checkboxSaveTimeout;
 
         // Get current step from URL
@@ -253,6 +254,21 @@
         function writeCheckboxStateDebounced(state) {
             clearTimeout(checkboxSaveTimeout);
             checkboxSaveTimeout = setTimeout(() => writeCheckboxState(state), 100);
+        }
+
+        function applyVisuallyHiddenStyles(element) {
+            Object.assign(element.style, {
+                position: 'absolute',
+                width: '1px',
+                height: '1px',
+                padding: '0',
+                margin: '-1px',
+                border: '0',
+                overflow: 'hidden',
+                clip: 'rect(0 0 0 0)',
+                clipPath: 'inset(50%)',
+                whiteSpace: 'nowrap'
+            });
         }
 
         function initializeTaskListCheckboxes(stepId) {
@@ -291,7 +307,7 @@
             const textArea = document.createElement('textarea');
             textArea.value = text;
             textArea.setAttribute('readonly', '');
-            textArea.style.cssText = 'position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; border: 0; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap;';
+            applyVisuallyHiddenStyles(textArea);
             document.body.appendChild(textArea);
             textArea.select();
 
@@ -333,7 +349,7 @@
                     resetTimeoutId = setTimeout(() => {
                         button.textContent = 'Copy';
                         button.classList.remove('copied', 'failed');
-                    }, 1600);
+                    }, COPY_FEEDBACK_DURATION_MS);
                 });
 
                 block.appendChild(button);
