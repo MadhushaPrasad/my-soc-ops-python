@@ -17,7 +17,9 @@ Welcome to Soc Ops — a hands-on workshop where you'll transform a simple Socia
 Before you begin, verify:
 
 - [ ] VS Code **v1.107+** (no pending updates)
-- [ ] Signed in with **GitHub Copilot** (Pro, Business, or Enterprise)
+- [ ] Signed in with **GitHub Copilot** (Free, Pro, Business, or Enterprise)
+
+> ⚠️ **Free-tier users:** Cloud Agents are not available on free-tier Copilot plans. The workshop provides alternative instructions wherever Cloud Agents are used.
 - [ ] Git installed
 - [ ] Python 3.13 & uv installed
 - [ ] Chat panel open and Agent ready

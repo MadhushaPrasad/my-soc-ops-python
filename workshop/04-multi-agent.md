@@ -37,22 +37,22 @@ A new **Scavenger Hunt** mode:
    - ✅ Creates a new component for the list view
    - ✅ Includes a progress indicator
    - ❌ Doesn't go overboard with features
+4. Once you're satisfied with the plan, click **Start Implementation** to execute it
 
 #### Phase 2: TDD Red (Write Failing Tests)
 
-1. Select **TDD Red** agent
-2. Click **Start**
-3. Watch as it writes tests for:
+1. In the same session, open the **Copilot Modes dropdown** (top of the chat panel) and select the **TDD Red** agent — this hands off the conversation context to the new agent
+2. The agent will begin writing failing tests. Watch as it writes tests for:
    - Component rendering
    - Checkbox interactions
    - Progress calculation
    - State management
 
-4. Check VS Code's **Test Explorer** to see the failing tests
+3. Check VS Code's **Test Explorer** to see the failing tests
 
 #### Phase 3: TDD Green (Make Tests Pass)
 
-1. When Red is done, select **TDD Green** agent
+1. When Red is done, switch to the **TDD Green** agent using the **Copilot Modes dropdown**
 2. Watch as it:
    - Implements the minimum code to pass tests
    - Runs tests after each change
@@ -60,7 +60,7 @@ A new **Scavenger Hunt** mode:
 
 #### Phase 4: Refactor (Clean Up)
 
-1. Select **TDD Refactor** agent
+1. Switch to the **TDD Refactor** agent using the **Copilot Modes dropdown**
 2. Let it clean up the code while keeping tests green
 
 ### Checkpoint Recovery

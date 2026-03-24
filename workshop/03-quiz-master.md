@@ -25,9 +25,10 @@ Custom agents are defined in `.github/agents/` and provide:
 
 ### Steps
 
-1. Start a **new Chat**
-2. Select **Quiz Master** as the custom agent (from the agent picker)
-3. Enter your theme:
+1. Start a **new Chat** (click the **New Session dropdown** `+` → **New Chat Session**)
+2. Make sure the **session type dropdown** at the bottom of the chat input shows **Local**
+3. Expand the **Copilot Modes dropdown** (top of the chat panel, next to the model picker) — you'll see a list of custom agents below the built-in modes (Ask, Agent, Plan). Select **Quiz Master**
+4. Enter your theme:
    ```
    Update questions to [YOUR THEME]
    ```
@@ -36,11 +37,12 @@ Custom agents are defined in `.github/agents/` and provide:
    Update quiz
    ```
 
-4. Review the generated questions
-5. Follow up for more creativity:
+5. Review the generated questions
+6. Follow up for more creativity:
    ```
    Make them more chaotic and unexpected!
    ```
+7. When you're happy with the result, **commit** the updated questions
 
 ### 🎭 Theme Ideas
 
@@ -66,6 +68,8 @@ Custom agents are defined in `.github/agents/` and provide:
 ---
 
 ## ☁️ Task: Cloud Quiz Generation
+
+> ⚠️ **Free-tier Copilot users:** Cloud Agents require a **Copilot Pro, Business, or Enterprise** subscription. If you're on the free tier, skip this task or use a **Local** session with the Quiz Master agent instead.
 
 Run the quiz master as a cloud agent for async generation.
 

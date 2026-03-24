@@ -20,43 +20,6 @@ Social Bingo game for in-person mixers. Find people who match the questions and 
 
 ---
 
-## Prerequisites
+## 🚀 Getting Started
 
-- [Python 3.13](https://www.python.org/downloads/) or higher
-- [uv](https://docs.astral.sh/uv/) package manager
-
-## Setup
-
-```bash
-uv sync
-```
-
-### Devcontainer / Codespaces
-
-This repository includes a preconfigured devcontainer at `.devcontainer/devcontainer.json`.
-
-- **Local VS Code**: Reopen the repo in container when prompted
-- **GitHub Codespaces**: In your own repository created from this template, click **Code** → **Codespaces** → **Create codespace on main**
-
-## Run
-
-```bash
-uv run uvicorn app.main:app --reload
-```
-
-Then open http://localhost:8000 in your browser.
-
-## Test
-
-```bash
-uv run pytest
-```
-
-## Lint
-
-```bash
-uv run ruff check .
-uv run ruff format .
-```
-
-Deploys automatically to GitHub Pages on push to `main`.
+Head to **[Part 00: Overview](workshop/00-overview.md)** for prerequisites and setup instructions.

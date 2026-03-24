@@ -17,13 +17,14 @@ Use the **Plan agent** to start any bigger work item. Iterate on the plan (2+ ti
 ### Steps
 
 1. Click the **New Session dropdown** (`+`) and select **Plan**
-2. Enter your vision:
+2. Make sure the **session type dropdown** at the bottom of the chat input shows **Local** (if your previous session was Cloud, switch it back)
+3. Enter your vision:
    ```
    Let's do a full redesign. Make it [YOUR THEME]
    ```
-3. Review the generated plan
-4. Ask for adjustments until you're happy
-5. Click **Start Implementation** to execute
+4. Review the generated plan
+5. Ask for adjustments until you're happy
+6. Click **Start Implementation** to execute
 
 ### 🎭 Theme Ideas
 
@@ -60,6 +61,8 @@ When you make major architecture, design, or dependency changes, update your ins
 ---
 
 ## 🚀 Task 3: Scale Exploration with Cloud Agents
+
+> ⚠️ **Free-tier Copilot users:** Cloud Agents require a **Copilot Pro, Business, or Enterprise** subscription. If you're on the free tier you will see a 403 Forbidden error. **Alternative:** Use **Autopilot** mode or a local **Plan** session to explore one design variation at a time.
 
 Generate multiple design variations in parallel using cloud agents.
 

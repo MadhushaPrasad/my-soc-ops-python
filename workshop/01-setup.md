@@ -51,6 +51,10 @@ The agent will:
 - Install any missing dependencies
 - Start the development server
 
+> ⚠️ **Codespace in the browser:** If you're running the app inside a GitHub Codespace via the browser (not VS Code Desktop), styles and interactions (e.g. the Start Game button) may not work correctly due to private port authentication. To fix this, either:
+> 1. In the **Ports** panel (bottom bar), right-click port `8000` → **Port Visibility** → **Public**
+> 2. Or open the Codespace in **VS Code Desktop** instead (click the hamburger menu `☰` → **Open in VS Code Desktop**)
+
 ✅ **Success:** App is running in your browser!
 
 ---
@@ -65,7 +69,7 @@ Instructions guide all agentic interactions, making them efficient and reliable.
 
 **Steps:**
 
-1. Run command: `Chat: Generate Workspace Instructions File`
+1. Open the Command Palette (`Ctrl+Shift+P` / `Cmd+Shift+P`) and run: `Chat: Generate Agent Instructions`
 2. Wait for the agent to analyze your codebase
 3. Review the generated instructions (probably too detailed!)
 4. Follow up with:
@@ -98,6 +102,8 @@ Copilot CLI sessions run in isolated git worktrees, which is perfect for tasks t
 4. Right-click the session to delete it when done
 
 **Start a Cloud Agent session:**
+
+> ⚠️ **Free-tier Copilot users:** Cloud Agents require a **Copilot Pro, Business, or Enterprise** subscription. If you're on the free tier you will see a 403 Forbidden error. **Alternative:** Open a second **Copilot CLI session** instead and give it the same prompt below.
 
 1. Click the **New Session dropdown** (`+`) and select **New Chat Session**
 2. In the **session type dropdown** at the bottom of the chat input (shows `Local`), select **Cloud**

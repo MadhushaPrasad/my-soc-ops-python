@@ -10,7 +10,7 @@ Your goal is to successfully build and run the workspace as local development en
 - [ ] Required dependencies (Python 3.13+, uv) installed and verified
 - [ ] Dependencies synced (`uv sync`)
 - [ ] Tests passing (`uv run pytest`)
-- [ ] Dev server running (`uv run uvicorn app.main:app --reload --port 8000`)
+- [ ] Dev server running (`uv run uvicorn app.main:app --reload --host 0.0.0.0 --port 8000`)
 - [ ] Site opened in external browser (use `$BROWSER` or instruct the user to open http://localhost:8000)
 - [ ] Short engaging welcome tour for the workspace
 
