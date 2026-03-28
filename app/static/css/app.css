@@ -161,3 +161,248 @@ button:disabled {
 .animate-\[bounce_0\.5s_ease-out\] {
     animation: bounce 0.5s ease-out;
 }
+
+/* ============================================================
+   LANDING PAGE – Midnight Carnival theme
+   ============================================================ */
+
+.landing-wrapper {
+    position: relative;
+    min-height: 100%;
+    background: #070d1f;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Ambient glow orbs */
+.landing-wrapper::before,
+.landing-wrapper::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+}
+.landing-wrapper::before {
+    width: 380px;
+    height: 380px;
+    background: radial-gradient(circle, rgba(255, 107, 53, 0.18) 0%, transparent 70%);
+    top: -120px;
+    right: -100px;
+}
+.landing-wrapper::after {
+    width: 320px;
+    height: 320px;
+    background: radial-gradient(circle, rgba(0, 212, 255, 0.14) 0%, transparent 70%);
+    bottom: -90px;
+    left: -90px;
+}
+
+/* Floating background letters */
+.landing-bg {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+.float-letter {
+    position: absolute;
+    font-family: 'Paytone One', sans-serif;
+    font-size: 10rem;
+    opacity: 0.035;
+    user-select: none;
+    animation: floatLetter 9s ease-in-out infinite;
+}
+.float-b { top: -20px;  left: -10px;  color: #ff6b35; animation-delay: 0s; }
+.float-i { top: 8%;     right: -5px;  color: #00d4ff; animation-delay: 1.8s; }
+.float-n { bottom: 22%; left: 3%;     color: #ff6b35; animation-delay: 3.4s; }
+.float-g { top: 48%;    right: 2%;    color: #00d4ff; animation-delay: 5s; }
+.float-o { bottom: -10px; right: 18%; color: #fbbf24; animation-delay: 2.2s; }
+
+@keyframes floatLetter {
+    0%, 100% { transform: translateY(0) rotate(-6deg); }
+    50%       { transform: translateY(-18px) rotate(6deg); }
+}
+
+/* Content container */
+.landing-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1.5rem;
+    max-width: 380px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Pill badge */
+.landing-badge {
+    display: inline-block;
+    padding: 0.3rem 0.85rem;
+    background: rgba(255, 107, 53, 0.12);
+    border: 1px solid rgba(255, 107, 53, 0.35);
+    border-radius: 999px;
+    color: #ff9b72;
+    font-size: 0.6rem;
+    letter-spacing: 0.18em;
+    font-weight: 700;
+    margin-bottom: 1.1rem;
+    animation: fadeSlideDown 0.55s ease both;
+}
+
+/* Title */
+.landing-title {
+    font-family: 'Paytone One', sans-serif;
+    font-size: 4rem;
+    font-weight: 900;
+    color: #ffffff;
+    line-height: 1;
+    margin: 0 0 0.3rem;
+    letter-spacing: -0.01em;
+    animation: fadeSlideDown 0.55s ease 0.08s both;
+}
+.title-accent {
+    color: #ff6b35;
+    position: relative;
+    display: inline-block;
+}
+.title-accent::after {
+    content: '';
+    position: absolute;
+    bottom: 3px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #ff6b35, #fbbf24);
+    border-radius: 2px;
+}
+
+/* Subtitle */
+.landing-subtitle {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.95rem;
+    margin: 0 0 1.6rem;
+    letter-spacing: 0.04em;
+    animation: fadeSlideDown 0.55s ease 0.16s both;
+}
+
+/* Mini bingo card preview */
+.mini-card {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    border-radius: 12px;
+    padding: 0.6rem;
+    margin-bottom: 1.6rem;
+    animation: fadeSlideDown 0.55s ease 0.24s both;
+}
+.mini-card-header {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 3px;
+    margin-bottom: 3px;
+}
+.mini-card-header span {
+    font-family: 'Paytone One', sans-serif;
+    font-size: 0.6rem;
+    color: #ff6b35;
+    text-align: center;
+    padding: 2px 0;
+    letter-spacing: 0.08em;
+}
+.mini-card-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 3px;
+}
+.mini-sq {
+    width: 22px;
+    height: 22px;
+    border-radius: 3px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+}
+.mini-sq.marked {
+    background: rgba(0, 212, 255, 0.22);
+    border-color: rgba(0, 212, 255, 0.45);
+}
+.mini-sq.free {
+    background: rgba(255, 107, 53, 0.28);
+    border-color: rgba(255, 107, 53, 0.55);
+}
+
+/* How to play */
+.how-to-play {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1.75rem;
+    animation: fadeSlideDown 0.55s ease 0.32s both;
+}
+.how-to-play-title {
+    font-family: 'Paytone One', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    color: rgba(255, 255, 255, 0.35);
+    text-transform: uppercase;
+    margin: 0 0 0.5rem;
+}
+.play-step {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 10px;
+    padding: 0.65rem 0.9rem;
+    text-align: left;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.85rem;
+}
+.step-icon {
+    flex-shrink: 0;
+    font-size: 1rem;
+    width: 1.4rem;
+    text-align: center;
+    font-style: normal;
+}
+
+/* CTA button */
+.landing-cta {
+    width: 100%;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, #ff6b35 0%, #ff9500 100%);
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    font-family: 'Paytone One', sans-serif;
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    box-shadow: 0 4px 24px rgba(255, 107, 53, 0.45);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    animation: fadeSlideDown 0.55s ease 0.4s both;
+}
+.landing-cta:active {
+    transform: scale(0.97);
+    box-shadow: 0 2px 12px rgba(255, 107, 53, 0.3);
+}
+.cta-arrow {
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+.landing-cta:active .cta-arrow {
+    transform: translateX(4px);
+}
+
+/* Entrance animation */
+@keyframes fadeSlideDown {
+    from { opacity: 0; transform: translateY(-14px); }
+    to   { opacity: 1; transform: translateY(0); }
+}

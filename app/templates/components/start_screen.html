@@ -1,24 +1,81 @@
 <div id="game-container">
-<div class="flex flex-col items-center justify-center min-h-full p-6 bg-gray-50">
-    <div class="text-center max-w-sm">
-        <h1 class="text-4xl font-bold text-gray-900 mb-2">Soc Ops</h1>
-        <p class="text-lg text-gray-600 mb-8">Social Bingo</p>
+<div class="landing-wrapper">
+    <!-- Floating decorative bingo letters -->
+    <div class="landing-bg" aria-hidden="true">
+        <span class="float-letter float-b">B</span>
+        <span class="float-letter float-i">I</span>
+        <span class="float-letter float-n">N</span>
+        <span class="float-letter float-g">G</span>
+        <span class="float-letter float-o">O</span>
+    </div>
 
-        <div class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 mb-8">
-            <h2 class="font-semibold text-gray-800 mb-3">How to play</h2>
-            <ul class="text-left text-gray-600 text-sm space-y-2">
-                <li>• Find people who match the questions</li>
-                <li>• Tap a square when you find a match</li>
-                <li>• Get 5 in a row to win!</li>
-            </ul>
+    <!-- Main content -->
+    <div class="landing-content">
+        <!-- Event tag -->
+        <div class="landing-badge">✦ SOCIAL ICEBREAKER ✦</div>
+
+        <!-- Title -->
+        <h1 class="landing-title">Soc <span class="title-accent">Ops</span></h1>
+        <p class="landing-subtitle">Find your people. Play Bingo.</p>
+
+        <!-- Decorative mini bingo card -->
+        <div class="mini-card" aria-hidden="true">
+            <div class="mini-card-header">
+                <span>B</span><span>I</span><span>N</span><span>G</span><span>O</span>
+            </div>
+            <div class="mini-card-grid">
+                <div class="mini-sq marked"></div>
+                <div class="mini-sq"></div>
+                <div class="mini-sq"></div>
+                <div class="mini-sq"></div>
+                <div class="mini-sq marked"></div>
+                <div class="mini-sq"></div>
+                <div class="mini-sq marked"></div>
+                <div class="mini-sq"></div>
+                <div class="mini-sq marked"></div>
+                <div class="mini-sq"></div>
+                <div class="mini-sq"></div>
+                <div class="mini-sq"></div>
+                <div class="mini-sq free"></div>
+                <div class="mini-sq"></div>
+                <div class="mini-sq"></div>
+                <div class="mini-sq"></div>
+                <div class="mini-sq marked"></div>
+                <div class="mini-sq"></div>
+                <div class="mini-sq marked"></div>
+                <div class="mini-sq"></div>
+                <div class="mini-sq marked"></div>
+                <div class="mini-sq"></div>
+                <div class="mini-sq"></div>
+                <div class="mini-sq"></div>
+                <div class="mini-sq marked"></div>
+            </div>
         </div>
 
+        <!-- How to play -->
+        <div class="how-to-play">
+            <h2 class="how-to-play-title">How to play</h2>
+            <div class="play-step">
+                <span class="step-icon">👥</span>
+                <span>Find people who match the questions</span>
+            </div>
+            <div class="play-step">
+                <span class="step-icon">✓</span>
+                <span>Tap a square when you find a match</span>
+            </div>
+            <div class="play-step">
+                <span class="step-icon">🎉</span>
+                <span>Get 5 in a row to win!</span>
+            </div>
+        </div>
+
+        <!-- CTA -->
         <button
             hx-post="/start"
             hx-target="#game-container"
             hx-swap="outerHTML"
-            class="w-full bg-accent text-white font-semibold py-4 px-8 rounded-lg text-lg active:bg-accent-light transition-colors">
-            Start Game
+            class="landing-cta">
+            Start Game <span class="cta-arrow">→</span>
         </button>
     </div>
 </div>
